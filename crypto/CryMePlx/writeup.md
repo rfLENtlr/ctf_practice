@@ -4,7 +4,7 @@ Category: CRY | 100 pts - 170 solves
 
 # CryMePlx (cybersecurity rumble ctf 2022)
 
-> Description: Awesome service. Now I don't need to encrypt anything myself! \
+> Description: Awesome service. Now I don't need to encrypt anything myself!
 > Connect via: `nc chall.rumble.host 2734`
 
 [与えられたzipファイル](./given_files/download_cry_intro.zip)をダウンロードし解凍すると，[encrypt.py](./given_files/encrypt.py)が手に入る．\
