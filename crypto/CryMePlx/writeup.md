@@ -8,7 +8,7 @@ Category: CRY | 100 pts - 170 solves
 > Connect via: `nc chall.rumble.host 2734`
 
 [与えられたzipファイル](./given_files/download_cry_intro.zip)をダウンロードし解凍すると，[encrypt.py](./given_files/encrypt.py)が手に入る．\
-ソースコードをみると，16バイト（=128ビット）の鍵を使用したAES-128で，flagと入力文字列を暗号化していることがわかる．\
+ソースコードをみると，16バイト（=128ビット）の鍵を使用したAES-128で，flagと入力文字列を暗号化していることがわかる．
 > 参考：[PycryptoでのAES暗号化](https://morioh.com/p/c96bcbf9c28f)
 
 ```python
