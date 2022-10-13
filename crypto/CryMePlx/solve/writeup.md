@@ -1,6 +1,8 @@
----
-Category: CRY | 100 pts - 170 solves
----
+
+| Category | Point                |
+| -------- | -------------------- |
+| CRY      | 100 pts - 170 solves |
+
 
 # CryMePlx (cybersecurity rumble ctf 2022)
 
