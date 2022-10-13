@@ -14,5 +14,3 @@ def encrypt(msg):
 print(encrypt(flag))
 q = input("Encrypt this string:").encode()
 print(encrypt(q))
-
-# 29文字

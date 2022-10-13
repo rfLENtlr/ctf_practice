@@ -29,7 +29,7 @@ print(encrypt(q))
 ```
 
 CTRの暗号化の仕組み：
-<figure><img src="../assets/Ctr_encryption.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./assets/Ctr_encryption.png" alt=""><figcaption></figcaption></figure>
 
 > 参考：[暗号利用モード](https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%88%A9%E7%94%A8%E3%83%A2%E3%83%BC%E3%83%89), [暗号利用モードCTRについて](https://qiita.com/asksaito/items/130863fe9e6a08dcd65d)
 
