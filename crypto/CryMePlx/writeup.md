@@ -50,8 +50,7 @@ flag &=& AES(Key, Noce) \oplus Ciphertext1 \\
 &=& Ciphertext2 \oplus input \oplus Ciphertext1
 \end{eqnarray*}
 ```
-
-Let's write our exploit:
+と求まる．
 
 ```python
 from pwn import *
