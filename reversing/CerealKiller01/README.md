@@ -8,4 +8,4 @@ SHA1: 8e7c1dd9835c6206d952855401c87234b1a0f3b3
 SHA1: 826dfb91409caa6ce02f88a46f2d63715ff85f82
 
 # Solution
-[Writeup]()
+[Writeup](./solve/writeup.md)
