@@ -9,7 +9,8 @@
 > Description: Awesome service. Now I don't need to encrypt anything myself!
 > Connect via: `nc chall.rumble.host 2734`
 
-[与えられたzipファイル](./given_files/download_cry_intro.zip)をダウンロードし解凍すると，[encrypt.py](./given_files/encrypt.py)が手に入る．\
+# Writeup
+[与えられたzipファイル](../given_files/download_cry_intro.zip)をダウンロードし解凍すると，[encrypt.py](../given_files/encrypt.py)が手に入る．\
 ソースコードをみると，16バイト（=128ビット）の鍵を使用したAES-128で，flagと入力文字列を暗号化していることがわかる．
 > 参考：[PycryptoでのAES暗号化](https://morioh.com/p/c96bcbf9c28f)
 
@@ -31,7 +32,7 @@ print(encrypt(q))
 ```
 
 CTRの暗号化の仕組み：
-<figure><img src="./assets/Ctr_encryption.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Ctr_encryption.png" alt=""><figcaption></figcaption></figure>
 
 > 参考：[暗号利用モード](https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%88%A9%E7%94%A8%E3%83%A2%E3%83%BC%E3%83%89), [暗号利用モードCTRについて](https://qiita.com/asksaito/items/130863fe9e6a08dcd65d)
 
