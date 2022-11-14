@@ -17,8 +17,8 @@ SHA1: 826dfb91409caa6ce02f88a46f2d63715ff85f82
 実行すると，質問を出力し回答の入力を受け付けるプログラムである．試しに"kellogg"を入力してみた．もしかしたら，正しい回答をするとフラグが得られるかも．．．
 <figure><img src="../assets/exec.png" alt=""><figcaption></figcaption></figure>
 
-ReversingなのでGhidraで解析するが，その前に，[Goバイナリ用のGhidra Scripts](https://github.com/getCUJO/ThreatIntel/tree/master/Scripts/Ghidra)をインストールする．  
-インストール後，スクリプトを使用しながらGhidraで解析すると，main.mainが見つかる．
+Ghidraで静的解析するが，その前に，[Goバイナリ用のGhidra Scripts](https://github.com/getCUJO/ThreatIntel/tree/master/Scripts/Ghidra)をインストールする．  
+インストール後，スクリプトを使用して，main.mainを見やすくする．
 <figure><img src="../assets/main.png" alt=""><img src="../assets/main2.png" alt=""><figcaption></figcaption></figure>
 実行したときの質問文らしきものが見つかるので，このfunctionを重点的に見ればよさそう．
 ざっとみると，
@@ -34,10 +34,27 @@ ReversingなのでGhidraで解析するが，その前に，[Goバイナリ用�
 <figure><img src="../assets/mem.png" alt=""><figcaption></figcaption></figure>
 
 ここまでのプログラムの流れを簡単に説明すると，
-(入力文字列をsha3256でハッシュ化した文字列) = (518d46520a......の文字列)であるか比較している．
+(入力文字列をsha3-256でハッシュ化した文字列) = (518d46520a4c87ff7016edcb7c6bbc621526760187819f007cf06f662786776e)であるか比較している．
 
-518d46520aから始まる文字列を逆変換すればよさそうに思えるが，容易ではない．
- > ハッシュ値から、そのようなハッシュ値となるメッセージを得ることが（事実上）不可能である．（原像計算困難性、弱衝突耐性)  
+518d46520a4c87ff7016edcb7c6bbc621526760187819f007cf06f662786776e を逆変換すれば正しい入力文字列が得られるが，容易ではない．
+ > ハッシュ値から、そのようなハッシュ値となる文字列を得ることは（事実上）不可能である．（原像計算困難性、弱衝突耐性)  
  参考：[暗号学的ハッシュ関数](https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0)
 
- しかし，[Hashcat](https://hashcat.net/hashcat/)というパスワードクラッカーを使えば，復元することができる．
+ ハッシュ，[Hashcat](https://hashcat.net/hashcat/)というパスワードクラッカーを使えば，復元できる場合がある．  
+ hashcatの使い方は，以下の通りで，今回の場合は**ハッシュ値**と**辞書**を指定し，辞書攻撃を行う．  
+ 辞書は[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)を用いることが多いらしい．
+~~~
+Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
+~~~
+
+オプション -mで指定するHash-typeを調べる．
+<figure><img src="../assets/hashcat_help.png" alt=""><figcaption></figcaption></figure>
+
+ダウンロードした[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)を用いて辞書攻撃を行うと，
+~~~
+hashcat -m 17400 hash.txt /usr/share/wordlists/rockyou.txt
+~~~
+<figure><img src="../assets/hashcat-exe.png" alt=""><figcaption></figcaption></figure>
+
+パスワードは **cocoapuffs** であるとことがわかった．
+<figure><img src="../assets/ans.png" alt=""><figcaption></figcaption></figure>
