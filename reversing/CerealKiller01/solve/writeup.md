@@ -49,6 +49,7 @@ Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]
 
 オプション -mで指定するHash-typeを調べる．
 <figure><img src="../assets/hashcat_help.png" alt=""><figcaption></figcaption></figure>
+![My Image](../assets/hashcat_help.png)
 
 ダウンロードした[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)を用いて辞書攻撃を行うと，
 ~~~
