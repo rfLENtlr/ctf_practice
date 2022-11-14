@@ -52,7 +52,8 @@ Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]
 
 ダウンロードした[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)を用いて辞書攻撃を行うと，
 ~~~
-hashcat -m 17400 hash.txt /usr/share/wordlists/rockyou.txt
+echo 518d46520a4c87ff7016edcb7c6bbc621526760187819f007cf06f662786776e > hash.txt
+sudo hashcat -m 17400 hash.txt /usr/share/wordlists/rockyou.txt
 ~~~
 <figure><img src="../assets/hashcat-exe.png" alt=""><figcaption></figcaption></figure>
 
