@@ -34,7 +34,7 @@ main関数の処理1. 2. の逆の復号をすればよい．
 ### 2. の復号
 CONCAT44は4バイトと4バイトを連結する関数のようなもので，71行目から比較しているバイト列は
 ```math 
-uStack_44 + local_48 + uStack_3c + uStack_40 + uStack_34 + local_38 + uStack_2c + uStack_30 + local_28
+uStack\_44 + local\_48 + uStack\_3c + uStack\_40 + uStack\_34 + local\_38 + uStack\_2c + uStack\_30 + local\_28
 ```
 なので，
 ```python
