@@ -1,9 +1,9 @@
 # Cereal Killer 01 (DEADFACE CTF 2022)
 > mirveal doesn't like spooky cereals. He prefers something much more pedestrian, but thoroughly sugarful. Enter the answer as flag{here-is-the-answer}.  
 > Choose either the Windows binary or the Linux binary, whichever you are most comfortable analyzing.  
-> [Download Windows Binary](./given_files/deadface2022_re05.exe)
+> [Download Windows Binary](../given_files/deadface2022_re05.exe)
 SHA1: 8e7c1dd9835c6206d952855401c87234b1a0f3b3  
-> [Download Linux Binary](./given_files/deadface2022_re05)
+> [Download Linux Binary](../given_files/deadface2022_re05)
 SHA1: 826dfb91409caa6ce02f88a46f2d63715ff85f82
 
 # Writeup
@@ -49,8 +49,6 @@ Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]
 
 オプション -mで指定するHash-typeを調べる．
 <figure><img src="../assets/hashcat_help.png" alt=""><figcaption></figcaption></figure>
-![My Image](../assets/hashcat_help.png)
-
 ダウンロードした[rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)を用いて辞書攻撃を行うと，
 ~~~
 echo 518d46520a4c87ff7016edcb7c6bbc621526760187819f007cf06f662786776e > hash.txt
