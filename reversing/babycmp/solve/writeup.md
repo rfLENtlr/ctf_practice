@@ -191,7 +191,7 @@ bytes = [0x04, 0x20, 0x2f, 0x20, 0x20, 0x23, 0x1e, 0x59, 0x44, 0x1a, 0x7f, 0x35,
 
 Ghidraから推測したバイト列が間違っていたのは，スタック変数の理解が間違っていたから．  
 &local_68 = スタックポインタの初期値) - 0x68 だから，スタックの下から順にバイト列が並んでいる．
-<figure><img src="../assets/stack.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/stack.drawio.png" alt=""><img src="../assets/stackeditor.png" alt=""><figcaption></figcaption></figure>
 
 ### 1. XORをとっているバイト列
 main関数内のXORとっている部分をradare2で見つける．
