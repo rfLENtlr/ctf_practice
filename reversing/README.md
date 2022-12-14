@@ -10,7 +10,7 @@
 
 ## 役立つリンク
 ### サイト
-[ELFバイナリのリバースエンジニアリング入門](https://kashiwaba-yuki.com/ctf-elf-training)：Ghida, radare2, gdbを用いてELFを解析．
+[ELFバイナリのリバースエンジニアリング入門](https://kashiwaba-yuki.com/ctf-elf-training)：Ghida, radare2, gdbを用いてELFを解析．  
 [radare2によるバイナリ編集](https://poppycompass.hatenablog.jp/entry/2017/06/23/083824)：radare2でパッチをあてる  
 [Ghidraを使ったバイナリのパッチ方法](https://materials.rangeforce.com/tutorial/2020/04/12/Patching-Binaries/)：Ghidraのpatch instruction + Ghidra scriptでパッチをあてる
 ### youtube
