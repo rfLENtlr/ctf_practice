@@ -1,5 +1,15 @@
 # Reverse Engineering
 
+## 学習の手引き
+1. [CpawCTF](https://ctf.cpaw.site/)や [pico Gym](https://play.picoctf.org/practice) **(評価が80%以上のもの)** を解く
+
+2. 過去問を解く:
+
+    [Seccon Beginners CTF 2021](https://github.com/SECCON/Beginners_CTF_2021/tree/main/reversing)，[Wani CTF 2021](https://github.com/wani-hackase/wanictf2021-writeup/tree/main/rev)，[Anti-Debugging](https://github.com/SECCON/Beginners_CTF_2021/tree/main/reversing), [babycmp(SECCON CTF 2022)](https://github.com/SECCON/SECCON2022_online_CTF/tree/main/reversing/baby_cmp)，[Unreal Engine製ゲームのリバーシング](https://github.com/project-sekai-ctf/sekaictf-2022/tree/main/reverse/perfect-match-xtreme)，etc.
+
+3. 復習する．その際に，いろいろな解き方を考えてみる．(複数のWriteupを漁るのがよい)
+
+
 ## 問題
 [Cereal Killer 01](./CerealKiller01/README.md)：Dead Face CTF 2022  
 [babycmp](./babycmp/README.md)：SECCON CTF 2022
