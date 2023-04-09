@@ -1,7 +1,8 @@
 # Perfect Synchronization
+(2023/04/09追記：配布ファイルの再配布が禁止されていたことに気づいたため，これらを削除しました．)
 
 ## 概要
-- [`source.py`](./given/source.py)と[`output.txt`](./given/output.txt)が与えられている．
+- `source.py`と`output.txt`が与えられている．
 - ブロック暗号であるAESを用いてフラグを暗号化しているが，AES内のブロック暗号の暗号化方式がECBモードである．
 - ECBは脆弱なので，そこを突く
 

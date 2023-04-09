@@ -1,6 +1,8 @@
 # Ancient Encodings
+(2023/04/09追記：配布ファイルの再配布が禁止されていたことに気づいたため，これらを削除しました．)
+
 ## 概要
-[`output.txt`](./output.txt)と[`sorce.py`](./source.py)が与えられている．
+`output.txt`と`sorce.py`が与えられている．
 
 `source.py`を見るにbase64でフラグをエンコードしているようなので，これをデコードすればよい．
 
