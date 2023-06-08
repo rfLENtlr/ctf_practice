@@ -3,7 +3,7 @@
 ## Observation
 [main.py](../given_files/main.py)を眺めたり、実行したりすると、大体以下のことが分かる。
 * flagの`i`番目と`i+1`番目の文字の和の二乗に`i`が足された値が、暗号文の1文字になっている。
-* ↑の処理をflagの左端から実行して出来た`ciper`を`shuffle`した出力が、[`cipher.txt`](../given_files/cipher.txt)に書き込まれている。
+* ↑の処理をflagの左端から実行して出来た`cipher`を`shuffle`した出力が、[`cipher.txt`](../given_files/cipher.txt)に書き込まれている。
 * flagは44文字になっている(`cipher`の長さ+ 1)
 
 ## Answer
@@ -33,7 +33,7 @@ for c in cipher:
         if iroot(c-i,2)[1]: sorted[i] = iroot(c,2)[0]
 ```
 
-gmpy2はとても便利で、`iroot(c,2)`の返り値の`[1]`要素が、二乗根が整数ちょうど整数なら`True`を返すようになっている。
+gmpy2はとても便利で、`iroot(c,2)`の返り値の`[1]`要素は、計算した二乗根がちょうど整数なら`True`を返すようになっている。
 これをそのまま使えば、簡単に`cipher`を正しい順に(平方根を取った状態で)並びなおすことができる。 (`sorted`に格納している。)
 
 さて、次の疑問としては、求まった平方根の値から`flag`の文字を計算出来るかということだと思う。そしてこれも簡単に求まる。
