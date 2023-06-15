@@ -2,7 +2,8 @@
 
 `half` というバイナリが与えれている．
 
-`strings` コマンドで`just_password` 内の印字可能な文字列 (ASCII文字列) を表示してみる．`-d` オプションをつけることで，データセクション内の文字列だけを表示できる．
+`strings` コマンドで`just_password` 内の印字可能な文字列 (ASCII文字列) を表示してみる．
+`-d` オプションをつけることで，データセクション内の文字列だけを表示できる．
 ```
 strings -d half
 ```
@@ -33,3 +34,5 @@ _bin4ry_fi1e_with_s4ring3}
 Correct!
 :*3$"
 ```
+
+`ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}`
