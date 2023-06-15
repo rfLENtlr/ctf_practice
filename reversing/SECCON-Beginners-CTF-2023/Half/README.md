@@ -8,4 +8,4 @@
 > [half](./file/half)
 
 # Solution
-[Writeup](./solve/writeup.md)
+[Writeup](./solve)
