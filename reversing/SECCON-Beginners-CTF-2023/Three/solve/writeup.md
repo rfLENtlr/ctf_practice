@@ -33,7 +33,7 @@ main関数の内容をDecompilerで眺めると，`validate_flag`といういか
 
 `c`，`t`，`f`の文字が見える．
 
-各変数の中身を見ていくと，内容もFLAGらしい文字列（`{``}`とか`_`とかが含まれている）になっている．
+各変数の中身を見ていくと，内容もFLAGらしい文字列（`{` `}`とか`_`とかが含まれている）になっている．
 
 ![solve7](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Three/solve/assets/solve7.png)
 ![solve8](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Three/solve/assets/solve8.png)
