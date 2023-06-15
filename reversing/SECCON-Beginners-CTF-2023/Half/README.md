@@ -5,7 +5,7 @@
 > 
 > あとこのファイルってどうやって中身を見るんだろう...？
 > 
-> [Half](./assets/half)
+> [half](./assets/half)
 
 # Solution
 [Writeup](./solve/writeup.md)
