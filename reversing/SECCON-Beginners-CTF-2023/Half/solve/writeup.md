@@ -46,7 +46,7 @@ halfを選択し，「プログラムから開く」→「メモ帳」からメ�
 Ghidraを使うことでもFLAGが見つかる．
 
 ## Decompilerでmain関数を見た場合
-<figure><img src="./assets/r3_decompile" alt=""></figure>
+<figure><img src="./assets/r3_decompile.png" alt=""></figure>
 
 ## Defined Stringsを見た場合
-<figure><img src="./assets/r3_defined_strings" alt=""></figure>
+<figure><img src="./assets/r3_defined_strings.png" alt=""></figure>
