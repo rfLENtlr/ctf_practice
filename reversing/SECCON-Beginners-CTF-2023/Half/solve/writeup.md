@@ -40,7 +40,7 @@ Correct!
 # 別解その1
 halfを選択し，「プログラムから開く」→「メモ帳」からメモ帳アプリで開いてもFLAGが見つかる．
 
-![r2_memo](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r2_memo.png)
+<figure><img src="./assets/r2_memo.png" alt=""></figure>
 
 # 別解その2
 Ghidraを使うことでもFLAGが見つかる．
