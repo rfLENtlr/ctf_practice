@@ -6,4 +6,4 @@
 > [three](./file/three)
 
 # Solution
-[three](./solve/writeup.md)
+[Writeup](./solve/writeup.md)
