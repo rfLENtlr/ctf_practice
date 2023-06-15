@@ -44,3 +44,9 @@ halfを選択し，「プログラムから開く」→「メモ帳」からメ�
 
 # 別解その2
 Ghidraを使うことでもFLAGが見つかる．
+
+## Decompilerでmain関数を見た場合
+![r3_decompile](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r3_decompile.png)
+
+## Defined Stringsを見た場合
+![r3_defined_strings](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r3_defined_strings.png)
