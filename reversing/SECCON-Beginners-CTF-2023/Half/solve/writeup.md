@@ -36,3 +36,8 @@ Correct!
 ```
 
 `ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}`
+
+# 別解
+halfを選択し，「プログラムから開く」→「メモ帳」からメモ帳アプリで開いてもFLAGが見つかる．
+
+<figure><img src="../assets/r2_memo.png" alt=""></figure>
