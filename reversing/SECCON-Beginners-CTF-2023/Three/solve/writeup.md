@@ -41,6 +41,7 @@ flag_2 = f{n0ae0n_e4ept13
 ```
 
 左上から順に縦に読んでいけばOK．
+
 `ctf4b{c4n_y0u_ab1e_t0_und0_t4e_t4ree_sp1it_f14g3}`
 
 # 補足
