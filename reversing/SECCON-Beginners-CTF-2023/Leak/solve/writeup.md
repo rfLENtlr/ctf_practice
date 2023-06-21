@@ -114,3 +114,30 @@ ctf4b{p4y_n0_4ttent10n_t0_t4at_m4n_beh1nd_t4e_cur4a1n}
 ちなみに，`encrypt関数` は，カスタムされた`RC4` であった．
 カスタムRC4 を実装すれば，バイナリを実行しなくてもフラグを得ることができる．
 実装に関しては，[他の人のWriteup](https://tan.hatenadiary.jp/entry/2023/06/05/001017) を参照されたい．
+
+# Further study 2
+先ほどの解析した `record.pcap` から，サーバ側のポート番号 `5000` に対してデータが送られていることがわかっている．
+
+`Ghidra` の解析結果からも `hton(5000)` が使われており，ポート番号が `5000` だと分かる．
+
+であれば，`netcat` コマンドで `Listen`すればよいのではと思いやってみた．
+
+まず，`/tmp/flag` に `Wireshark` から取得した `flag` ファイルを置いておく．
+
+そして，二つのターミナル(クライアント・サーバ) を立ち上げる．
+
+サーバ側では `netcat` で接続待ちを行う．
+```
+$ nc -l -p 5000
+```
+クライアント側で，`leak` を実行し，`127.0.0.1` を入力する．
+```
+$ ./leak                                         
+Enter IP address: 127.0.0.1
+Data sent successfully
+```
+サーバ側にフラグが送られてきていることが確認できる．
+```
+$ nc -l -p 5000                                         
+ctf4b{p4y_n0_4ttent10n_t0_t4at_m4n_beh1nd_t4e_cur4a1n}
+```
