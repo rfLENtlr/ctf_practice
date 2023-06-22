@@ -3,8 +3,8 @@
 > [begginer]
 > You don't have permission to access /flag on this server.
 
-[Writeup公式]
-[他のWriteup]
+[Writeup公式]https://twitter.com/Sz4rny/status/1665228721861672962
+[他のWriteup]https://qiita.com/ohakutsu/items/87971a8b0136ad4dd3ee
 
 # Solution
 [Writeup](./solve/writeup.md)
