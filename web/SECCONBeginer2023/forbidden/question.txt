@@ -1,9 +1,0 @@
-Forbidden
-(56 pt)
-author:Tsubasa
-beginner
-You don't have permission to access /flag on this server.
-
-https://forbidden.beginners.seccon.games
-
-Forbidden.tar.gz 018c1361937a789b327181c9a46ec574906c360c
