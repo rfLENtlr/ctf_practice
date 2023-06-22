@@ -1,0 +1,9 @@
+phisher2
+(94 pt)
+author:xryuseix
+medium
+目に見える文字が全てではないが、過去の攻撃は通用しないはずです。
+
+https://phisher2.beginners.seccon.games
+
+phisher2.tar.gz 30ecedac5abd7d27ea3e4ae75c4237c949ba842c
