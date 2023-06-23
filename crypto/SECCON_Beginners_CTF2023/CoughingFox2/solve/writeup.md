@@ -1,4 +1,4 @@
-# My solutuion of CoughingFox2
+# My solution for CoughingFox2
 
 ## Observation
 [main.py](../given_files/main.py)を眺めたり、実行したりすると、大体以下のことが分かる。
