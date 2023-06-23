@@ -7,22 +7,20 @@ Usage:
 
 Commands:
     init GENRE/EVENT_NAME
-        GENRE/EVENT_NAMEに対応するwriteup用のディレクトリを初期化します。
-        GENREはcrypto|forensics|misc|pwn|reversing|web のいずれかの文字列です。
-        EVENT_NAMEは、hoge_CTF_2023のようになります。例えば、
+
+        Initialize the writeup directory that corresponds to `GENRE/EVENT_NAME`.
+        GENRE is [crypto|forensics|misc|pwn|reversing|web] and EVENT_NAME is 
+        like `hoge_CTF_2023`. For example: 
 
             $ writeup init crypto/hoge_CTF_2023
 
-        のように使います。
-
     add CHALLENGE_NAME
-        CHALLENGE_NAMEに対応するwriteupのテンプレートを作成します。
-        ctf_practice/GENRE/EVENTディレクトリで実行してください。例えば、
+        Generate the writeup template that corresponds to CHALLENGE_NAME.
+        This command has to be run in `ctf_practice/GENRE/EVENT` directory.
+        For example: 
 
             $ cd crypto/hoge_CTF_2023
             $ writeup add My_Question1
-
-        のように使います。
 
 EOF
 }
@@ -41,23 +39,30 @@ function init {
         fi
         ;;
     *) 
-        echo "Please chose the genre from [crypto|forensics|misc|pwn|reversing|web]."
+        echo "writeup init: Please chose the genre from [crypto|forensics|misc|pwn|reversing|web]."
         ;;
     esac
 }
 
 function add {
-    check=$(basename $(cd ../../ && pwd))
-    # イベントディレクトリ内かつ既に実行済みでないなら
-    if [ "$check" == "ctf_practice" ] && ! [ -e $1 ]; then
-        echo -e "* [$1](./$1.md)" >> ./README.md
-        mkdir $1
-        mkdir $1/given_files
-        mkdir $1/solve
-        touch $1/solve/writeup.md
-        mkdir $1/assets
-        echo -e "# $1\n\n(ここに問題文を書いてください)\n\n# Solution\n[Writeup](./solve/writeup.md)" >> $1/README.md
-        echo -e "# My solution for $1\n" >> $1/solve/writeup.md
+    chal=$1
+
+    # `add` should be run under the `ctf_practice/GENRE/EVENT` directory,
+    # and is determined by whether or not the two upper directory name is `ctf_practice`.
+    if ! [ "$(basename $(cd ../../ && pwd))" == "ctf_practice" ]; then
+        echo "writeup add: Please run under the \`ctf_practice/ジャンル/イベント名/\` directory "
+    elif [ -e $chal ]; then
+        echo "writeup add: \`$chal\` already exists"
+    else
+        # generate template
+        echo -e "* [$chal](./$chal.md)" >> ./README.md
+        mkdir $chal
+        mkdir $chal/given_files
+        mkdir $chal/solve
+        touch $chal/solve/writeup.md
+        mkdir $chal/assets
+        echo -e "# $chal\n\n(ここに問題文を書いてください)\n\n# Solution\n[Writeup](./solve/writeup.md)" >> $chal/README.md
+        echo -e "# My solution for $chal\n" >> $chal/solve/writeup.md
     fi
 }
 
@@ -71,6 +76,4 @@ add )
 *)
     usage
     ;;
-    
-
 esac
