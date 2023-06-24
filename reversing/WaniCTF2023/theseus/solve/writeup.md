@@ -1,4 +1,4 @@
-# My solution of theseus
+# My solution for theseus
 `chall` というバイナリが与えれている．問題文から，正しいフラグを入力すれば Correct と出力される問題だとわかる．
 
 Ghidraで解析する．

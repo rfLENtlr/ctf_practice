@@ -1,4 +1,4 @@
-# My solution of javersing
+# My solution for javersing
 `javersing.jar` というファイルが与えられている．
 `file` コマンドを使ってファイルの種類を調べると，Java Archive (jar) であることが確認できる．
 ```

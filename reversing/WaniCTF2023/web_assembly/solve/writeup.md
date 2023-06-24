@@ -1,4 +1,4 @@
-# My solution of web_assembly
+# My solution for web_assembly
 https://wasm-rev.wanictf.org/ にアクセスすると，ユーザ名とパスワードの入力を求められる．もちろん分からない．開発者ツールのソースを開くと `index.wasm` を見つけることができる．しかし，開発者ツールで見えているのは `WAT`というWASM のテキスト表現のようだ．WASMが欲しいので，Chat GPT に聞いてみた．
 
 ```

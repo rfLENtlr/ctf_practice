@@ -1,4 +1,4 @@
-# My solution of Lua
+# My solution for Lua
 
 この問題は，Luaスクリプト `main.lua` が与えられる．スクリプトは膨大な量かつ読みにくいことから，難読化が施されていることが推測できる．ちなみに，[過去のWaniCTF](https://github.com/wani-hackase/wanictf2021-writeup/tree/main/rev/emoemotet)でも，PowerShellの難読化が出題されている．
 
