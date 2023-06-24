@@ -1,4 +1,4 @@
-# My solution of Leak
+# My solution for Leak
 `leak` というバイナリと，`record.pcap` というパケットキャプチャファイルが与えられる．
 
 > サーバーから不審な通信を検出しました！

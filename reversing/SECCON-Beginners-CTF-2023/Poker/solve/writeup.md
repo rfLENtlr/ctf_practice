@@ -1,4 +1,4 @@
-# My solution of Poker
+# My solution for Poker
 ## ざっくりとしたバイナリの把握
 `Poker` というバイナリが与えられる．
 

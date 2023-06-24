@@ -1,4 +1,4 @@
-# My solution of Heaven
+# My solution for Heaven
 2つのファイルが与えられる．
 - `heaven` : binary
 - `log.txt` : text
