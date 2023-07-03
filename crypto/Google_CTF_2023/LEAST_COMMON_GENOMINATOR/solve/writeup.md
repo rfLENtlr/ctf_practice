@@ -8,7 +8,7 @@
 ### 1. LCGのパラメタを求める
 LCG (線形合同法) とは、以下の漸化式で定義される疑似乱数生成器のことである：
 
-$ X_{i+1} = (m \cdot X_i + c)\ \text{mod}\ n $
+$` X_{i+1} = (m \cdot X_i + c)\ \text{mod}\ n `$
 
 各パラメタ $m$, $c$, $n$ は、[generate.py](../given_files/generate.py) 内の以下のコードに対応している：
 
