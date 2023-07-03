@@ -55,7 +55,7 @@ function add {
         echo "writeup add: \`$chal\` already exists"
     else
         # generate template
-        echo -e "* [$chal](./$chal.md)" >> ./README.md
+        echo -e "* [$chal](./$chal/README.md)" >> ./README.md
         mkdir $chal
         mkdir $chal/given_files
         mkdir $chal/solve
