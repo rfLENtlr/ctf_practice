@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm shattered-1.pdf shattered-2.pdf
+
 wget https://shattered.it/static/shattered-1.pdf
 wget https://shattered.it/static/shattered-2.pdf
 
@@ -11,3 +13,5 @@ do
   echo -n a >> shattered-1.pdf
   echo -n a >> shattered-2.pdf
 done
+
+curl -X POST -F file1=@shattered-1.pdf -F file2=@shattered-2.pdf http://localhost/upload
