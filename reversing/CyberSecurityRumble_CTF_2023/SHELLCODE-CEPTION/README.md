@@ -1,6 +1,5 @@
 # SHELLCODE-CEPTION
-
-(ここに問題文を書いてください)
+特に重要な問題文はなし
 
 # Solution
 [Writeup](./solve/writeup.md)
