@@ -18,7 +18,7 @@ shellcode-ception: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dyna
 
 <figure><img src="../assets/ghidra_asm.png" alt=""></figure>
 
-`CALL RDX` で `RDX` がさすアドレスに処理が移っていることがわかるが，静的解析で `RDX` の値を求めることはは少し面倒くさい．
+`CALL RDX` で `RDX` がさすアドレスに処理が移っていることがわかるが，静的解析で `RDX` の値を求めることは少し面倒であるため，動的解析を用いる．
 
 ## 動的解析 (radare2)
 `radare2` で `CALL RDX` にブレイクポイントをはり，`RDX` の値を求める．
