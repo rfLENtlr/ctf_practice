@@ -35,7 +35,7 @@ for i in range(0,26):
 print(flag)
 ```
 
-# Futher study
+# Further study
 [angr](https://github.com/angr/angr) という動的シンボリック実行ツールを使うと，簡単に解くことができる．（angr を使って試したが，私のコードでは上手く行かなかったので Future Work とする．）
 
 [公式リポジトリ](https://github.com/angr/angr)のExampleを用いると簡単に解けてしまう．
