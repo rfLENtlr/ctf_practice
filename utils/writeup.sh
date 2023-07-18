@@ -30,7 +30,7 @@ function init {
     event=$(basename $1)
 
     case "$genre" in
-    crypto|forensics|misc|pwn|reversing|web)
+    crypto|forensics|misc|osint|pwn|reversing|web)
         if ! [ -e "$1" ]; then
             mkdir $1
             echo -e "# $event\n## 問題" > $1/README.md
@@ -39,7 +39,7 @@ function init {
         fi
         ;;
     *) 
-        echo "writeup init: Please chose the genre from [crypto|forensics|misc|pwn|reversing|web]."
+        echo "writeup init: Please chose the genre from [crypto|forensics|misc|osint|pwn|reversing|web]."
         ;;
     esac
 }
