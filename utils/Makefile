@@ -8,4 +8,4 @@ writeup: writeup.sh
 	fi
 
 clean:
-	rm ~/opt/bin/writeup
+	rm $$HOME/opt/bin/writeup
