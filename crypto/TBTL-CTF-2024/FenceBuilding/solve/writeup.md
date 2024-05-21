@@ -5,7 +5,7 @@
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_n0
 ```
 
-暗号文の中にTBTL{}の文字が入っていることから、アナグラム（文字並べ替え）と推測できる。
+暗号文の中に`TBTL{}`の文字が入っていることから、アナグラム（文字並べ替え）と推測できる。
 
 しかし、どのような基準で並べ替えを行っているか見当がつかない……
 
@@ -17,11 +17,12 @@ Split-rail fence 暗号で検索してみると、レールフェンス暗号と
 
 とても面白い暗号化手法だった。
 
-毎度おなじみ[CyberChefさん](https://gchq.github.io/CyberChef/)で復号を試みる。
+毎度おなじみ[CyberChef](https://gchq.github.io/CyberChef/)さんで復号を試みる。
 
 流石CyberChefさん、レールフェンス暗号の暗号化/復号もできるようになっている。
 
-RecipeとしてRail_Fence_Cipher_Decodeを選択。
+RecipeとしてRail_Fence_Cipher_Decodeを選択する。
+
 Key = 4とすると[復号できた](https://gchq.github.io/CyberChef/#recipe=Rail_Fence_Cipher_Decode(4,0)&input=VDBuNDBnNUJHMDNjbWswRDFocn1Ue2RGZV8zZ18zYnVMXzVfbjA&ieol=CRLF&oeol=CR)。
 ![](../assets/decode.png)
 
