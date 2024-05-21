@@ -1,0 +1,9 @@
+aiwaf
+(68 pt)
+author:Satoki
+easy
+AI-WAFを超えてゆけ！！ ※AI-WAFは気分屋なのでハックできたりできなかったりします。
+
+https://aiwaf.beginners.seccon.games
+
+aiwaf.tar.gz 2ce11f780bbdae5509bd80f9b3ef9d7545951f9f

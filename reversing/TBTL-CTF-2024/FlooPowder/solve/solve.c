@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// int array[] = { 0x52, 0x49, 0xca, 0x04, 0x2a, 0x5a, 0x74, 0x69, 0x90, 0x2a, 0x4a, 0x43, 0xc7, 0xa9, 0xd0, 0x36, 0xc8, 0xda, 0x02, 0x10, 0xeb, 0x3a, 0x93, 0x04, 0x25, 0x95, 0xa2, 0x71, 0x31, 0xd5, 0xa8, 0x6d, 0x80, 0x96, 0x25, 0x69, 0x3c, 0x21, 0x79, 0x21, 0x97, 0x60, 0x8a, 0x5d, 0x22, 0x28, 0xca, 0x6a, 0x02, 0xed, 0x95, 0x54, 0xd5, 0x2c, 0x5a, 0x25, 0x5a, 0x62, 0xb5, 0x16, 0xba, 0x8a, 0x8a, 0x2e, 0xb4, 0x5e, 0x6f, 0x2d, 0x52, 0xd9, 0x7c, 0x55, 0x95, 0xe4, 0xb4, 0x2c, 0xb9, 0x29, 0x0d, 0x02, 0x54, 0x28, 0x8b, 0x0e, 0x59, 0xc1, 0x46, 0x46, 0x81, 0x92, 0x74, 0x47, 0x46, 0x9d, 0x22, 0x54, 0x20, 0xd6, 0x1c, 0x6c, 0xff, 0x0e, 0xf8, 0x07, 0xa4, 0x46, 0xad, 0x04, 0x4e, 0xc0, 0xeb, 0x32, 0x23, 0x16, 0xac, 0x4f, 0x04, 0x1f, 0x0e, 0x60, 0x00, 0x30, 0xcd, 0x24 };
+
+/* extract from Ghidra using LazyGhidra (convert_to_c_array_dword)
+ * https://github.com/AllsafeCyberSecurity/LazyGhidra 
+*/
+unsigned int array[31] = {
+    0x04CA4952, 0x69745A2A, 0x434A2A90, 0x36D0A9C7, 0x1002DAC8, 0x04933AEB, 0x71A29525, 0x6DA8D531, 
+    0x69259680, 0x2179213C, 0x5D8A6097, 0x6ACA2822, 0x5495ED02, 0x255A2CD5, 0x16B5625A, 0x2E8A8ABA, 
+    0x2D6F5EB4, 0x557CD952, 0x2CB4E495, 0x020D29B9, 0x0E8B2854, 0x4646C159, 0x47749281, 0x54229D46, 
+    0x6C1CD620, 0x07F80EFF, 0x04AD46A4, 0x32EBC04E, 0x4FAC1623, 0x600E1F04, 0x24CD3000
+};
+void dec(int input[31][31], int param_1,int param_2,int param_3)
+{
+    long index1 = (long)param_1 * 0x1f + (long)param_2;
+    int index_array = (long)(param_3 / 0x1f);
+    int shift = (30 - (char)(param_3 % 0x1f)) & 0x1f;
+    int index2 = (array[index_array] >> shift & 1);
+
+    if (index2 != 0) {
+        input[index1/31][index1%31] = 1;
+    }
+    else {
+        input[index1/31][index1%31] =  0;
+    }
+}
+
+// https://qiita.com/harutiro/items/025353cec772a3c47388
+void putWhite(){
+    printf("\x1b[47m");     /* 背景色を白色に */
+    printf("　");
+    printf("\x1b[49m");     /* 背景色をデフォルトに戻す */
+}
+
+void putBlack(){
+    printf("\x1b[40m");     /* 背景色を黒色に */
+    printf("　");
+    printf("\x1b[49m");     /* 背景色をデフォルトに戻す */
+}
+
+int main(void)
+{
+    int m = 0;
+    int n = 0;
+    int k = 0;
+    int first = 1;
+    int local_10;
+    int local_c;
+    bool bVar2;
+    bool bVar3;
+    int input[31][31];
+    while((m < 0x1f && (n < 0x1f))) {
+        dec(input, m, n, k);
+        k = k + 1;
+        if (first == 1) {
+            local_10 = m - 1;
+            local_c = n + 1;
+        }
+        else {
+            local_10 = m + 1;
+            local_c = n - 1;
+        }
+        if ((((local_10 < 0) || (local_10 == 0x1f)) || (local_c < 0)) || (local_c == 0x1f)) {
+            if (first == 1) {
+                bVar2 = n == 0x1e;
+                bVar3 = n < 0x1e;
+            }
+            else {
+                bVar3 = m == 0x1e;
+                bVar2 = m < 0x1e;
+            }
+            n = n + (unsigned int)bVar3;
+            m = m + (unsigned int)bVar2;
+            first = 1 - first;
+        }
+        else {
+            m = local_10;
+            n = local_c;
+        } 
+    }
+
+    // print QR code 
+    for (int i = 0; i < 31; i++) {
+        for (int j = 0; j < 31; j++) {
+            if (input[i][j] == 1)
+                putBlack();
+            else
+                putWhite();
+        }
+        printf("\n");
+    }
+    printf("\n");
+}

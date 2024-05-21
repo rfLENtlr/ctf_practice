@@ -1,4 +1,4 @@
-# My solution of Just_passw0rd
+# My solution for Just_passw0rd
 `just_password` というバイナリが与えれている．
 
 `strings` コマンドで`just_password` 内の印字可能な文字列 (ASCII文字列) を表示してみる．`-d` オプションをつけることで，データセクション内の文字列だけを表示できる．

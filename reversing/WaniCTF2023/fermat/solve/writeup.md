@@ -1,4 +1,4 @@
-# My solution of fermat
+# My solution for fermat
 `fermat` というバイナリが与えられる．`strings` を使っても何も得られる情報はないので，`Ghidra`で解析してみる．ストリップされていないので，main関数はすぐに見つかる．（Rename Variable や Edit Function Signature で読みやすく変更している）
 <figure><img src="../assets/ghidra_main.png" alt=""></figure>
 <figure><img src="../assets/ghidra_check.png" alt=""></figure>
