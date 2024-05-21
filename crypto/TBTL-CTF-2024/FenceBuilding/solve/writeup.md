@@ -1,6 +1,6 @@
 # My solution for FenceBuiling
 
-問題文中で暗号化されたと思われる文字列が与えられている。
+問題文で、暗号化されたと思われる文字列が与えられている。
 ```
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_n0
 ```

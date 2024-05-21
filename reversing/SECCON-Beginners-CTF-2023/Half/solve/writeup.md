@@ -36,18 +36,20 @@ Correct!
 :*3$"
 ```
 
-`ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}`
+```
+ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}
+```
 
 # 別解その1
 halfを選択し，「プログラムから開く」→「メモ帳」からメモ帳アプリで開いてもFLAGが見つかる．
 
-<figure><img src="./assets/r2_memo.png" alt=""></figure>
+<figure><img src="../assets/r2_memo.png" alt=""></figure>
 
 # 別解その2
 Ghidraを使うことでもFLAGが見つかる．
 
 ## Decompilerでmain関数を見た場合
-<figure><img src="./assets/r3_decompile.png" alt=""></figure>
+<figure><img src="../assets/r3_decompile.png" alt=""></figure>
 
 ## Defined Stringsを見た場合
-<figure><img src="./assets/r3_defined_strings.png" alt=""></figure>
+<figure><img src="../assets/r3_defined_strings.png" alt=""></figure>
