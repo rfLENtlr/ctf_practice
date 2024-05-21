@@ -6,19 +6,23 @@ T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_n0
 ```
 
 暗号文の中にTBTL{}の文字が入っていることから、アナグラム（文字並べ替え）と推測できる。
+
 しかし、どのような基準で並べ替えを行っているか見当がつかない……
 
 問題文からして、Split-rail fenceに関連するような暗号化がなされていると予想する。
+
 Split-rail fence 暗号で検索してみると、レールフェンス暗号というものが見つかる。
 
 [暗号紹介：レールフェンス暗号・Redefence暗号 暗号の仕組みとその特徴｜あやしき下臈（げろう）](https://note.com/ayasiki_gerahu/n/nac665cb5f3c9)
 
 とても面白い暗号化手法だった。
-毎度おなじみ[CyberChefさん]（https://gchq.github.io/CyberChef/）で復号を試みる。
+
+毎度おなじみ[CyberChefさん](https://gchq.github.io/CyberChef/)で復号を試みる。
+
 流石CyberChefさん、レールフェンス暗号の暗号化/復号もできるようになっている。
 
 RecipeとしてRail_Fence_Cipher_Decodeを選択。
-Key = 4とすると[復号できた](https://gchq.github.io/CyberChef/#recipe=Rail_Fence_Cipher_Decode(4,0)&input=VDBuNDBnNUJHMDNjbWswRDFocn1Ue2RGZV8zZ18zYnVMXzVfbjA&ieol=CRLF&oeol=CR)
+Key = 4とすると[復号できた](https://gchq.github.io/CyberChef/#recipe=Rail_Fence_Cipher_Decode(4,0)&input=VDBuNDBnNUJHMDNjbWswRDFocn1Ue2RGZV8zZ18zYnVMXzVfbjA&ieol=CRLF&oeol=CR)。
 ![](../assets/decode.png)
 
 ```
@@ -28,9 +32,10 @@ TBTL{G00d_F3nce5_m4k3_g00D_n31ghb0ur5}
 # 別解
 
 プログラムで復号することもできる。
+
 参考：[picoCTF2022 #Python - Qiita](https://qiita.com/motimotipurinn/items/776afed34512f64d77c2)
 
-。[ソルバー](./solve.c)を実行すると、3行目（Key = 4）でFlagが出力される。
+[ソルバー](./solve.c)を実行すると、3行目（Key = 4）でFlagが出力される。
 ```
 $ python solve.py
 T}0Tn{4d0Fge5_B3Gg0_33cbmukL0_D51_hnr0
