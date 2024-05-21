@@ -24,6 +24,7 @@ Split-rail fence 暗号で検索してみると、レールフェンス暗号と
 RecipeとしてRail_Fence_Cipher_Decodeを選択する。
 
 Key = 4とすると[復号できた](https://gchq.github.io/CyberChef/#recipe=Rail_Fence_Cipher_Decode(4,0)&input=VDBuNDBnNUJHMDNjbWswRDFocn1Ue2RGZV8zZ18zYnVMXzVfbjA&ieol=CRLF&oeol=CR)。
+
 ![](../assets/decode.png)
 
 ```
