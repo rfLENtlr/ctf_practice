@@ -3,6 +3,7 @@
 `half` というバイナリが与えれている．
 
 `strings` コマンドで`just_password` 内の印字可能な文字列 (ASCII文字列) を表示してみる．
+
 `-d` オプションをつけることで，データセクション内の文字列だけを表示できる．
 ```
 strings -d half
@@ -35,18 +36,20 @@ Correct!
 :*3$"
 ```
 
-`ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}`
+```
+ctf4b{ge4_t0_kn0w_the_bin4ry_fi1e_with_s4ring3}
+```
 
 # 別解その1
 halfを選択し，「プログラムから開く」→「メモ帳」からメモ帳アプリで開いてもFLAGが見つかる．
 
-![r2_memo](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r2_memo.png)
+<figure><img src="../assets/r2_memo.png" alt=""></figure>
 
 # 別解その2
 Ghidraを使うことでもFLAGが見つかる．
 
 ## Decompilerでmain関数を見た場合
-![r3_decompile](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r3_decompile.png)
+<figure><img src="../assets/r3_decompile.png" alt=""></figure>
 
 ## Defined Stringsを見た場合
-![r3_defined_strings](https://github.com/Conceal104/ctf_practice/blob/main/reversing/SECCON-Beginners-CTF-2023/Half/solve/assets/r3_defined_strings.png)
+<figure><img src="../assets/r3_defined_strings.png" alt=""></figure>
