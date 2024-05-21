@@ -1,6 +1,6 @@
 # My solution for FenceBuiling
 
-問題文中で文字列が与えられている。
+問題文中で暗号化されたと思われる文字列が与えられている。
 ```
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_n0
 ```
@@ -37,7 +37,7 @@ TBTL{G00d_F3nce5_m4k3_g00D_n31ghb0ur5}
 
 参考：[picoCTF2022 #Python - Qiita](https://qiita.com/motimotipurinn/items/776afed34512f64d77c2)
 
-[ソルバー](./solve.c)を実行すると、3行目（Key = 4）でFlagが出力される。
+[ソルバー](./solve.py)を実行すると、3行目（Key = 4）でFlagが出力される。
 ```
 $ python solve.py
 T}0Tn{4d0Fge5_B3Gg0_33cbmukL0_D51_hnr0
@@ -76,4 +76,8 @@ T0n40g5BG03cmk0D1hr}T{dFe_3g_3u__0n5Lb
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3bu__0n5L
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL__0n5
 T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_0n
+```
+
+```
+TBTL{G00d_F3nce5_m4k3_g00D_n31ghb0ur5}
 ```
