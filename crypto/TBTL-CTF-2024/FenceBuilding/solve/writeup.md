@@ -9,9 +9,9 @@ T0n40g5BG03cmk0D1hr}T{dFe_3g_3buL_5_n0
 
 しかし、どのような基準で並べ替えを行っているか見当がつかない……
 
-問題文からして、Split-rail fenceに関連するような暗号化がなされていると予想する。
+問題文からして、`Split-rail fence`に関連するような暗号化がなされていると予想する。
 
-Split-rail fence 暗号で検索してみると、レールフェンス暗号というものが見つかる。
+`Split-rail fence 暗号`で検索してみると、レールフェンス暗号というものが見つかる。
 
 [暗号紹介：レールフェンス暗号・Redefence暗号 暗号の仕組みとその特徴｜あやしき下臈（げろう）](https://note.com/ayasiki_gerahu/n/nac665cb5f3c9)
 
