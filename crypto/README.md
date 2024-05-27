@@ -6,3 +6,6 @@
 * [UIUCTF](./UIUCTF_2023/README.md)
 * [Google CTF](./Google_CTF_2023/README.md)
 * [SECCON Beginners CTF](./SECCON_Beginners_CTF_2023/README.md)
+
+## 2024
+* [L3akCTF](./L3akCTF2024/README.md)
