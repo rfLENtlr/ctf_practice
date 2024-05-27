@@ -6,11 +6,9 @@ Sanity CheckのFlag（rulesチャンネルの概要に設定されていた）�
 
 そこで、FlagはDiscordアプリ上では見られないと推測。
 
-Web上で[Discord](https://discord.gg/wjSVdt3a7G)を開き、開発者ツールを使ってbotのプロフィール画像等を眺めてみる。
+Web上で[Discord](https://discord.gg/wjSVdt3a7G)を開き、開発者ツールを使ってbotのプロフィール画像等を眺めてみるも、こちらも特に情報はなさそう。
 
-……特に情報はなさそう。
-
-Webが空振りっぽかったので、今度はDiscordのAPIを利用することを考える。
+空振りっぽかったので、今度はDiscordのAPIを利用することを考える。
 
 DiscordのAPIを利用すると、チャンネルや役職などの情報を得ることができる。
 
@@ -21,6 +19,8 @@ DiscordのAPIを利用すると、チャンネルや役職などの情報を得�
 [Discord トークンとは何ですか? どうすれば取得できますか? - Gamingdeputy Japan](https://www.gamingdeputy.com/jp/how-tos/discord-トークンとは何ですか-どうすれば取得できます/)
 
 [Discord の自分のアカウントの Token を取得しよう！](https://shunshun94.github.io/shared/sample/discordAccountToken)
+
+　
 
 Web上で[Discord](https://discord.gg/wjSVdt3a7G)を開いた状態から、開発者ツールの`ネットワーク`タブを開く。
 
