@@ -4,9 +4,7 @@
 
 どうやらAztec codeと呼ばれるコードの模様（タイトル回収）
 
-参考：
-
-[Aztec コードにおけるシンボル | Cognex](https://www.cognex.com/ja-jp/resources/symbologies/2-d-matrix-codes/aztec-codes)
+参考：[Aztec コードにおけるシンボル | Cognex](https://www.cognex.com/ja-jp/resources/symbologies/2-d-matrix-codes/aztec-codes)
 
 本来、Aztec codeはモノクロ画像のはずだが、RGBで表現されたカラフルな画像になっている
 
@@ -14,8 +12,9 @@
 
 PythonでRGBの要素を抜き出してAztec codeを生成するプログラムを作成する。
 
-[プログラム](./solve.c)を動かし、RGBそれぞれのAztec codeを生成する（生成結果は以下の通り）
+[作成したプログラム](./solve.c)を動かし、RGBそれぞれのAztec codeを生成する（生成結果は以下の通り）
 
+<img src="../assets/redshare.png" width="300%">
 ![](../assets/redshare.png)
 ![](../assets/blueshare.png)
 ![](../assets/greenshare.png)
