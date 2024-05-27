@@ -6,7 +6,7 @@ Sanity CheckのFlag（rulesチャンネルの概要に設定されていた）�
 
 そこで、FlagはDiscordアプリ上では見られないと推測。
 
-Web上で[Discord](https://discord.gg/wjSVdt3a7G)を開き、開発者ツールを使ってbotのプロフィール画像等を眺めてみるも、こちらも特に情報はなさそう。
+続いてWeb上で[Discord](https://discord.gg/wjSVdt3a7G)を開き、開発者ツールを使ってbotのプロフィール画像等を眺めてみるも、こちらも特に情報はなさそう。
 
 空振りっぽかったので、今度はDiscordのAPIを利用することを考える。
 
@@ -27,6 +27,8 @@ Web上で[Discord](https://discord.gg/wjSVdt3a7G)を開いた状態から、開�
 F5キーを押してリロードし、Headers->Request Headers->authorizationの値を確認する（この値がトークン）
 
 注意：アカウントのなりすまし等防止のため、トークンは他人に教えないようにすること！
+
+　
 
 続いて、トークンを使ってDiscordのAPIを動作させる。
 
