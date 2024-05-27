@@ -1,15 +1,17 @@
 import numpy as np
 import cv2
 
-#画像を読み込む
+# 画像を読み込む
 original = cv2.imread('challenge.png')
 height, width, channel = original.shape[:3]
 
+# RGBそれぞれのaztec codeを初期化
 size = (height, width)
 greenshare = np.zeros(size, np.uint8)
 redshare = np.zeros(size, np.uint8)
 blueshare = np.zeros(size, np.uint8)
 
+# RGBそれぞれのaztec codeを生成
 for h in range(height):
     for w in range(width):
         if original[h][w][0] == 255:
