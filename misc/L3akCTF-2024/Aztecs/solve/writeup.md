@@ -14,7 +14,8 @@ PythonでRGBの要素を抜き出してAztec codeを生成するプログラム�
 
 [作成したプログラム](./solve.c)を動かし、RGBそれぞれのAztec codeを生成する（生成結果は以下の通り）
 
-<img src="../assets/redshare.png" width="300%">
+<img src="../assets/redshare.png" width="100%">
+
 ![](../assets/redshare.png)
 ![](../assets/blueshare.png)
 ![](../assets/greenshare.png)
