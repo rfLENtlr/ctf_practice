@@ -2,6 +2,8 @@
 
 配布ファイルとして[png画像](../given_files/challenge.png)が1枚与えられる。
 
+<img src="../given_files/challenge.png" width="30%">
+
 どうやらAztec codeと呼ばれるコードの模様（タイトル回収）
 
 参考：[Aztec コードにおけるシンボル | Cognex](https://www.cognex.com/ja-jp/resources/symbologies/2-d-matrix-codes/aztec-codes)
@@ -14,11 +16,9 @@ PythonでRGBの要素を抜き出してAztec codeを生成するプログラム�
 
 [作成したプログラム](./solve.c)を動かし、RGBそれぞれのAztec codeを生成する（生成結果は以下の通り）
 
-<img src="../assets/redshare.png" width="100%">
-
-![](../assets/redshare.png)
-![](../assets/blueshare.png)
-![](../assets/greenshare.png)
+<img src="../assets/redshare.png" width="30%">
+<img src="../assets/blueshare.png" width="30%">
+<img src="../assets/greenshare.png" width="30%">
 
 それぞれのAztec codeを読み取ると、以下のような文字列が出てくる
 
