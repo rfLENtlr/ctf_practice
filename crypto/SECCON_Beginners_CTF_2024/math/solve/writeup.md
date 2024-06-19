@@ -127,8 +127,8 @@ $ab$ を $(a' b')^2$ で割った値を求めて[factordbで素因数分解](htt
 \begin{align}
 ab &= (p - x) (q - x) \
 &= pq - (p + q) x + x^2 \
-&= n - (p + q) x + x^2 (\because n = pq)\
-&= n - (a + b + 2x) x + x^2 (\because a = p - x, b = q - x)\
+&= n - (p + q) x + x^2  (\because n = pq)\
+&= n - (a + b + 2x) x + x^2  (\because a = p - x, b = q - x)\
 &= n - (a + b) x - x^2 \
 \therefore x^2 + (a + b) x + ab - n &= 0
 \end{align}
