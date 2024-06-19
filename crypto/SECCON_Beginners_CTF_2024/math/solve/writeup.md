@@ -69,30 +69,30 @@ ab = 283479628318827694546185539549588198513195799844823330001624926910218025193
 
 `chal.py`がどのような処理を行っているのか、上から順に眺める。
 
-- 関数is_square(n: int)
+- 関数`is_square(n: int)`
     - $n$ の平方根の2乗が $n$ と一致するかどうか、すなわち $n$ が平方数であるかどうかを、bool型（True, False）で返す。
-- assert isPrime(p), assert isPrime(q)
+- `assert isPrime(p)`, `assert isPrime(q)`
     - $p$, $q$ が素数であるかの判定を行っている。
     - 出力結果から、実行時に判定を通過しているので $p$, $q$ は素数である。
-- assert p != q
+- `assert p != q`
     - $p \neq q$ であるかの判定を行っている。
     - 出力結果から、実行時に判定を通過しているので $p \neq q$ である。
-- a = p - x, b = q - x
+- `a = p - x`, `b = q - x`
     - そのままの意味なので説明は省略。
-- assert is_square(x) and is_square(a) and is_square(b)
+- `assert is_square(x) and is_square(a) and is_square(b)`
     - $x$, $a$, $b$ が平方数であるかどうかの判定を関数is_squareで行っている。
-- n = p * q, e = 65537
+- `n = p * q`, `e = 65537`
     - そのままの意味なので説明は省略。
-- flag = b"ctf4b{dummy_f14g}"
+- `flag = b"ctf4b{dummy_f14g}"`
     - flag文字列をバイト列リテラルとして入力している。
     - 配布ファイルではダミーのflagが入力されている模様。
-- mes = bytes_to_long(flag)
+- `mes = bytes_to_long(flag)`
     - flag文字列をbytes_to_long関数で数値に変換している。
-- c = pow(mes, e, n)
+- `c = pow(mes, e, n)`
     - $c = mes^{e} \mod n$ を求めている、すなわちflagをRSAで暗号化している。
-- print文
+- `print`文
     - $n$, $e$, $c$, $ab$ （ $ab = a \times b$ ）の出力を行っている。
-- assert文
+- `assert`文
     - $a$, $b$ を続く値で割った時の余りが0であるかどうかの判定、すなわち $a$, $b$ が続く値（以下、それぞれ $a'$, $b'$ とおく）を約数に持つかどうかの判定を行っている。
     - `clews of factors`とコメントがあることから、おそらく $a'$, $b'$ は それぞれ $a$, $b$ が持つ素因数だと推測できる。
     - 実際に[factordb](http://www.factordb.com/index.php)を使うと、 $a'$, $b'$ が共に素数であり、 それぞれ $a$, $b$ が持つ素因数であることが分かる。
