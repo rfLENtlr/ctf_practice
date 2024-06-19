@@ -86,7 +86,7 @@ ab = 283479628318827694546185539549588198513195799844823330001624926910218025193
 - mes = bytes_to_long(flag)
     - flag文字列をbytes_to_long関数で数値に変換している。
 - c = pow(mes, e, n)
-    - $c = mes^e mod n$を求めている、すなわちflagをRSAで暗号化している。
+    - $c = mes^{e} \mod n$を求めている、すなわちflagをRSAで暗号化している。
 - print文
     - `n`, `e`, `c`, `ab`($ab = a \times b$)の出力を行っている。
 - assert文
