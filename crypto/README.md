@@ -9,3 +9,4 @@
 
 ## 2024
 * [L3akCTF](./L3akCTF2024/README.md)
+* [SECCON Beginners CTF](./SECCON_Beginners_CTF_2024/README.md)
