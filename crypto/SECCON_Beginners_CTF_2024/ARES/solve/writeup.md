@@ -18,7 +18,7 @@ $\textsf{ARES}.\textsf{Dec} = \textsf{RSA}.\textsf{Dec}(\textsf{AES}.\textsf{Dec
 暗号文 $c$ を入力すると、十分現実的な確率で対応する平文 $m$ を出力してくれるアルゴリズムのことを、暗号理論の言葉で **復号オラクル** と呼ぶ (要は $\textsf{AES}.\textsf{Dec}$ を模倣するアルゴリズムのこと)。
 
 $\textsf{ARES}$ の復号方式に着目すると、この問題では $\textsf{AES}$ の復号オラクルをこちら側で用意できることが分かる。
-具体的には、 $\textsf{RSA}.\textsf{Enc}(\textsf{ARES}.\textsf{Dec}(c))$ が復号オラクルとなる。なお、$\textsf{RSA}.\textsf{Enc}$ に必要な公開鍵は、サーバーに -1 を暗号化してもらい、得られた暗号文を再度サーバーに復号してもらい、その値に 1 を加えることで得られる。
+具体的には、 $\textsf{RSA}.\textsf{Enc}(\textsf{ARES}.\textsf{Dec}(c))$ が復号オラクルとなる。なお、 $\textsf{RSA}.\textsf{Enc}$ に必要な公開鍵は、サーバーに -1 を暗号化してもらい、得られた暗号文を再度サーバーに復号してもらい、その値に 1 を加えることで得られる。
 
 ここまでを python で書くと以下のようになる：
 
@@ -57,11 +57,11 @@ def AES_dec(iv: str, c: str) -> str:
 
 ## 復号オラクルの応答が `enc_flag` になるような暗号文を作る
 
-AES 暗号文の第 $k$ ブロックを $c_k$ 、その復号結果に対応する平文ブロックを $\bar{c_k}$ 、ブロック単位の復号の関数を $\textsf{dec}$ とすると、 CBC モードの復号方法より $\bar{c_k} = \textsf{dec}(c_k) \oplus c_{k-1}$ が成り立つ。
+AES 暗号文の第 $k$ ブロックを $c_k$ 、その復号結果に対応する平文ブロックを $\overline{c_k}$ 、ブロック単位の復号の関数を $\textsf{dec}$ とすると、 CBC モードの復号方法より $\overline{c_k} = \textsf{dec}(c_k) \oplus c_{k-1}$ が成り立つ。
 
-概要で述べた通り、本問では $\textsf{AES}.\textsf{Dec}(c) = \textsf{ef}$ なる $c$ を作ることができればフラグが求まるので、上式において $\bar{c_k}$ が $\textsf{ef}_k$ ( $\textsf{ef}$ の16バイトごとに区切ったときの $k$ 番目のブロック) となるような $c_{k-1}'$ を各 $k$ について求めれば良いことが分かる。
+概要で述べた通り、本問では $\textsf{AES}.\textsf{Dec}(c) = \textsf{ef}$ なる $c$ を作ることができればフラグが求まるので、上式において $\overline{c_k}$ が $\textsf{ef}\_k$ ( $\textsf{ef}$ の16バイトごとに区切ったときの $k$ 番目のブロック) となるような $c_{k-1}'$ を各 $k$ について求めれば良いことが分かる。
 
-上式を等式変形すると $\bar{c_k} \oplus \bar{c_k} \oplus \textsf{ef}_k = \textsf{dec}(c_k) \oplus c_{k-1} \oplus \bar{c_k} \oplus \textsf{ef}_k$ 、すなわち $\textsf{ef}_k = \textsf{dec}(c_k) \oplus c_{k-1} \oplus \bar{c_k} \oplus \textsf{ef}_k$ であるから、 $c_{k-1}'$ として $c_{k-1} \oplus \bar{c_k} \oplus \textsf{ef}_k$ を選べばよいことが分かる。
+上式を等式変形すると $\overline{c_k} \oplus \overline{c_k} \oplus \textsf{ef}\_k = \textsf{dec}(c_k) \oplus c_{k-1} \oplus \overline{c_k} \oplus \textsf{ef}\_k$ 、すなわち $\textsf{ef}\_k = \textsf{dec}(c_k) \oplus c_{k-1} \oplus \overline{c_k} \oplus \textsf{ef}\_k$ であるから、 $c_{k-1}'$ として $c_{k-1} \oplus \overline{c_k} \oplus \textsf{ef}_k$ を選べばよいことが分かる。
 
 この方法を末尾ブロックから先頭に向かって順に行っていけば、最終的に所望の $c$ が得られる:
 
