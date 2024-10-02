@@ -1,3 +1,7 @@
+# 解説
+frontend.tsがクライアントで，user-search.tsがサーバー側で、サーバーはユーザー検索を行うAPIを提供しており、apikeyで認証を行っており、apikeyがFLAGなので、このapikeyを取得するのが目的。
+frontend.tsで我々の入力したuserというクエリ文字列の名前を検索するリクエスト(apikeyを含む)をサーバー(user-search.ts)に送られるようになっており、この通信に注目するとよい。
+
 # solver
 ```
 curl 'http://35.194.136.248:3000/search?user={自身の管理するサーバーのURL}'

@@ -1,0 +1,25 @@
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile_inline: |
+        FROM denoland/deno:debian-1.46.3@sha256:5c2dd16fe7794631ce03f3ee48c983fe6240da4c574f4705ed52a091e1baa098
+        COPY ./frontend.ts /app/
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    environment:
+      - FLAG=IERAE{dummy}
+    command: run --allow-net --allow-env /app/frontend.ts
+  user-search:
+    build:
+      context: ./
+      dockerfile_inline: |
+        FROM denoland/deno:debian-1.46.3@sha256:5c2dd16fe7794631ce03f3ee48c983fe6240da4c574f4705ed52a091e1baa098
+        COPY ./user-search.ts /app/
+    restart: unless-stopped
+    ports:
+      - 3000
+    environment:
+      - FLAG=IERAE{dummy}
+    command: run --allow-net --allow-env /app/user-search.ts
