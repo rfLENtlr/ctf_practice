@@ -176,3 +176,5 @@ current flag = Alpaca{h4sh_4lgor1thm_1s_b4s3d_0n_MD5_4nd_keccak
 current flag = Alpaca{h4sh_4lgor1thm_1s_b4s3d_0n_MD5_4nd_keccak}
 FLAG FOUND: Alpaca{h4sh_4lgor1thm_1s_b4s3d_0n_MD5_4nd_keccak}
 ```
+
+さらに、radare2などのデバッガツールで自動スクリプトの練習をしたい場合は、[WaniCTF2024のgate](../../../WaniCTF2024/gates/README.md)や[CyberSecurityRumbleCTF2023](../../../CyberSecurityRumble_CTF_2023/SHELLCODE-CEPTION/README.md)の問題を解くと良いかもしれない。
