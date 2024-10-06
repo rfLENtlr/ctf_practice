@@ -23,7 +23,9 @@
 - [TBTL CTF 2024](./TBTL-CTF-2024/README.md)
 - [L3ak CTF2024](./L3akCTF2024/README.md)
 - [SECCON Beginners CTF 2024](./SECCON-Beginners-CTF-2024/README.md)（全問）
-
+- [Wani CTF 2024](./WaniCTF2024/README.md)
+- [AlpacaHack Round4](./AlpacaHack_Round_4/README.md)
+  
 ## ツールの使い方メモ（WIP）
 - [Ghidra](./tools/ghidra/README.md)  
 - [radare2](./tools/radare2/README.md)

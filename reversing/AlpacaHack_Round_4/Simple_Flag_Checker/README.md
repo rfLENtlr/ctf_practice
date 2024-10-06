@@ -3,4 +3,5 @@
 A simple flag checker :)
 
 # Solution
-[Writeup](./solve/writeup.md)
+- [Writeup by rfLENtlr](./solve/writeup.md)
+- [Writeup by mn1](./solve/writeup_mn1.md)
