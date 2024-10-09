@@ -148,7 +148,7 @@ if __name__ == "__main__":
 ```
 という内容である。
 
-つまり、1.2.3.の内容を`correct_flag_encrypted`を持ちて遡るように処理をすることで結果を求めることができる。
+つまり、1.2.3.の内容を`correct_flag_encrypted`を用いて遡るように処理をすることで結果を求めることができる。
 
 ```python
 # solve.py
