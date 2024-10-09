@@ -3,3 +3,4 @@
 * [home](./home/README.md) (Normal)
 * [gates](./gates/README.md) (Normal)
 * [Thread](./Thread/README.md) (Hard)
+* [lambda](./lambda/README.md)
